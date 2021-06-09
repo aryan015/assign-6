@@ -1,3 +1,6 @@
+html{
+  font-size: 100%;
+}
 body {
   background: linear-gradient(0deg, rgb(0, 0, 0), rgb(123, 123, 123));
   height: 98vh;
@@ -8,8 +11,8 @@ body {
   flex-direction: column;
 }
 #circle {
-  height: 335px;
-  width: 335px;
+  height: 20.9rem;
+  width: 20.9rem;
   border: 2px solid rgb(255, 255, 255);
   border-radius: 50%;
 
@@ -23,8 +26,8 @@ body {
 }
 
 input {
-  height: 100px;
-  width: 122px;
+  height: 6.3rem;
+  width: 7.6rem;
   font-size: 5rem;
   color: rgb(255, 255, 255);
 
@@ -47,26 +50,38 @@ img {
   cursor: pointer;
 }
 #play {
-  height: 66px;
-  width: 66px;
+  height: 4.1rem;
+  width: 4.1rem;
 
   position: relative;
-  top: 90px;
+  top: 5.6rem;
   left: 0;
 }
 #pause {
-  height: 45px;
-  width: 45px;
+  height: 2.8rem;
+  width: 2.8rem;
 
   position: relative;
-  top: -110px;
-  left: 162px;
+  top: -6.9rem;
+  left: 10.1rem;
 }
 #replay {
-  height: 48px;
-  width: 48px;
+  height: 3rem;
+  width: 3rem;
 
   position: relative;
-  top: -60px;
-  left: -162px;
+  top: -3.8rem;
+  left: -10.1rem;
+}
+
+@media (max-width:768px){
+  html{
+    font-size:87%;
+  }
+}
+
+@media (max-width:425px){
+  html{
+    font-size:70%;
+  }
 }
