@@ -13,19 +13,17 @@ let input = document.getElementsByTagName("input")[0];
 
 //Start the event
 btnPlay.addEventListener("click", function () {
-  div.innerText = counter = input.value;
-
-  if (counter < 10 && counter >= 0) {
-    div.innerText = "0" + counter;
+  clearInterval(interval);
+  counter = input.value;
+  if(input.value==""){
+    location.reload();
   }
-
   interval = setInterval(play, 1000);
 });
 
 //reset the timer
 btnReset.addEventListener("click", function () {
   console.log("reset");
-
   location.reload();
 });
 
@@ -37,12 +35,14 @@ btnPause.addEventListener("click", function () {
 
 //Function is passed when play button is pressed
 function play() {
-  if (counter < 10 && counter > 0) {
-    div.innerText = "0" + --counter;
-  }
-
+  
   if (counter >= 10) {
     console.log("play");
-    div.innerText = --counter;
+    div.innerText = counter--;
   }
+
+  if (counter < 10 && counter >= 0) {
+    div.innerText = "0" + counter--;
+  }
+
 }
