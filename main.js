@@ -15,7 +15,7 @@ let input = document.getElementsByTagName("input")[0];
 btnPlay.addEventListener("click", function () {
   clearInterval(interval);
   counter = input.value;
-  if(input.value==""){
+  if (input.value == "") {
     location.reload();
   }
   interval = setInterval(play, 1000);
@@ -23,7 +23,7 @@ btnPlay.addEventListener("click", function () {
 
 //reset the timer
 btnReset.addEventListener("click", function () {
-  console.log("reset");
+  // console.log("reset");
   location.reload();
 });
 
@@ -35,14 +35,12 @@ btnPause.addEventListener("click", function () {
 
 //Function is passed when play button is pressed
 function play() {
-  
   if (counter >= 10) {
-    console.log("play");
+    // console.log("play");
     div.innerText = counter--;
   }
 
   if (counter < 10 && counter >= 0) {
     div.innerText = "0" + counter--;
   }
-
 }
